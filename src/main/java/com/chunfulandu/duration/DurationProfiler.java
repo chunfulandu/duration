@@ -1,4 +1,4 @@
-package com.souche.duration;
+package com.chunfulandu.duration;
 
 import org.apache.commons.lang.StringUtils;
 

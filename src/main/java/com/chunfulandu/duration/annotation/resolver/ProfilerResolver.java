@@ -1,7 +1,7 @@
-package com.souche.duration.annotation.resolver;
+package com.chunfulandu.duration.annotation.resolver;
 
-import com.souche.duration.DurationProfiler;
-import com.souche.duration.annotation.Profiler;
+import com.chunfulandu.duration.DurationProfiler;
+import com.chunfulandu.duration.annotation.Profiler;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -20,7 +20,7 @@ import java.lang.reflect.Method;
 @Component
 public class ProfilerResolver {
 
-    @Around("@annotation(com.souche.duration.annotation.Profiler)")
+    @Around("@annotation(com.chunfulandu.duration.annotation.Profiler)")
     public Object duration(ProceedingJoinPoint point) {
         MethodSignature joinPointObject = (MethodSignature) point.getSignature();
         String method = joinPointObject.getMethod().getName();
@@ -38,17 +38,17 @@ public class ProfilerResolver {
         return null;
     }
 
-    @Around("@annotation(com.souche.duration.annotation.RootProfiler)")
+    @Around("@annotation(com.chunfulandu.duration.annotation.RootProfiler)")
     public Object rootDuration(ProceedingJoinPoint point) {
         return duration(point);
     }
 
-    @After("@annotation(com.souche.duration.annotation.RootProfiler)")
+    @After("@annotation(com.chunfulandu.duration.annotation.RootProfiler)")
     public void after() {
         DurationProfiler.over();
     }
 
-    @After("@annotation(com.souche.duration.annotation.Profiler)")
+    @After("@annotation(com.chunfulandu.duration.annotation.Profiler)")
     public void rootAfter(JoinPoint point) {
         MethodSignature joinPointObject = (MethodSignature) point.getSignature();
         Method method = joinPointObject.getMethod();

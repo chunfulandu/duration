@@ -1,6 +1,6 @@
-package com.souche.duration.intercept;
+package com.chunfulandu.duration.intercept;
 
-import com.souche.duration.DurationProfiler;
+import com.chunfulandu.duration.DurationProfiler;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.stereotype.Component;
