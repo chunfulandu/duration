@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author chengchf
- * @date 2019/4/9 6:16 PM
  */
 @Component
 public class DurationMethodIntercepter implements MethodInterceptor {
