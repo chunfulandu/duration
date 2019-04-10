@@ -19,6 +19,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
     </properties>
 
@@ -37,6 +38,11 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pfichtner</groupId>
+            <artifactId>durationformatter</artifactId>
+            <version>0.1.1</version>
         </dependency>
     </dependencies>
 
