@@ -1,15 +1,20 @@
 package com.chunfulandu.duration;
 
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author chengchf
  */
 public class DurationProfiler {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DurationProfiler.class);
 
     private static final ThreadLocal<Entry> STACK = new ThreadLocal<>();
 
@@ -66,7 +71,7 @@ public class DurationProfiler {
         Entry root = STACK.get();
         if (currentEntry == root && currentEntry != null) {
             currentEntry.finish();
-            System.out.println(DurationProfiler.dump());
+            LOGGER.info(UUID.randomUUID() + DurationProfiler.dump());
             DurationProfiler.reset();
         }
     }
