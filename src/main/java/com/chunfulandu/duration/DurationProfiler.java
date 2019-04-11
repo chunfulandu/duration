@@ -249,6 +249,9 @@ public class DurationProfiler {
             }
             return last;
         }
+    }
 
+    public static void main(String[] args) {
+        LOGGER.info("2425232");
     }
 }
