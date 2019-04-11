@@ -6,7 +6,7 @@
 
     <groupId>com.github.chunfulandu</groupId>
     <artifactId>duration-profiler</artifactId>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
     <name>duration</name>
     <description>duration profiler com.github.chunfulandu jar</description>
     <url>https://github.com/chunfulandu/duration</url>
